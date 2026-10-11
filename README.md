@@ -19,4 +19,4 @@
 ...
 
 ## 👤 نویسنده
-[نام تو] — [@royarezvani](https://github.com/royarezvani)
+[@royarezvani](https://github.com/royarezvani)
