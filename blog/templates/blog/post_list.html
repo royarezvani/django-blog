@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}لیست پست‌ها{% endblock %}
+
+{% block content %}
+<h1>📝 لیست پست‌ها</h1>
+<hr>
+
+{% for post in posts %}
+    <div class="post">
+        <h2><a href="{% url 'post_detail' post.id %}">{{ post.title }}</a></h2>
+        <p>{{ post.content|truncatewords:30 }}</p>
+        <div class="meta">
+            نویسنده: {{ post.author.username }} |
+            تاریخ: {{ post.created_at|date:"Y/m/d H:i" }}
+        </div>
+    </div>
+{% empty %}
+    <p>هنوز پستی منتشر نشده!</p>
+{% endfor %}
+{% endblock %}

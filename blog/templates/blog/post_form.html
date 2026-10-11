@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}{% if post %}ویرایش{% else %}پست جدید{% endif %}{% endblock %}
+
+{% block content %}
+<h1>{% if post %}✏️ ویرایش پست{% else %}➕ پست جدید{% endif %}</h1>
+<hr>
+
+<form method="post">
+    {% csrf_token %}
+    <label>عنوان:</label>
+    <input type="text" name="title" value="{{ post.title|default:'' }}" required>
+    
+    <label>محتوا:</label>
+    <textarea name="content" required>{{ post.content|default:'' }}</textarea>
+    
+    <br>
+    <button type="submit" class="btn">💾 ذخیره</button>
+    <a href="{% url 'post_list' %}" class="btn">انصراف</a>
+</form>
+{% endblock %}

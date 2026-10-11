@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+<h1>📝 ثبت‌نام</h1>
+<hr>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn">ثبت‌نام</button>
+</form>
+
+<p>حساب داری؟ <a href="{% url 'login' %}">ورود</a></p>
+{% endblock %}
