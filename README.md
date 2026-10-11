@@ -10,6 +10,21 @@
 - 🗑 حذف پست (فقط نویسنده)
 - 🎨 رابط کاربری RTL
 
+## 📸 اسکرین‌شات‌ها
+
+### لیست پست‌ها
+![List](screenshots/list.png)
+
+### ساخت پست
+![Form](screenshots/form.png)
+
+### ثبت‌نام
+![Signup](screenshots/signup.png)
+
+### ورود
+![Login](screenshots/login.png)
+
+
 ## 🛠️ تکنولوژی‌ها
 - Python 3
 - Django 5.0+
